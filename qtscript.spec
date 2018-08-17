@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.11.1
-Release  : 9
+Release  : 10
 URL      : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qtscript-everywhere-src-5.11.1.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qtscript-everywhere-src-5.11.1.tar.xz
 Summary  : No detailed summary available
@@ -12,15 +12,15 @@ Group    : Development/Tools
 License  : BSD-3-Clause BSD-3-Clause-Clear GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-3.0
 Requires: qtscript-lib
 Requires: qtscript-license
-BuildRequires : cmake
+Requires: qtscript-extras
+BuildRequires : buildreq-cmake
+BuildRequires : buildreq-qmake
 BuildRequires : mesa-dev
 BuildRequires : pkgconfig(Qt5Core)
 BuildRequires : pkgconfig(Qt5Gui)
 BuildRequires : pkgconfig(Qt5Test)
 BuildRequires : pkgconfig(Qt5UiTools)
 BuildRequires : pkgconfig(Qt5Widgets)
-BuildRequires : qtbase-dev
-BuildRequires : qtbase-extras
 
 %description
 Qt is provided with a powerful embedded scripting environment through the Qt Script
@@ -34,6 +34,14 @@ Provides: qtscript-devel
 
 %description dev
 dev components for the qtscript package.
+
+
+%package extras
+Summary: extras components for the qtscript package.
+Group: Default
+
+%description extras
+extras components for the qtscript package.
 
 
 %package lib
@@ -66,18 +74,18 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530982726
+export SOURCE_DATE_EPOCH=1534487481
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/qtscript
+cp LICENSE.FDL %{buildroot}/usr/share/doc/qtscript/LICENSE.FDL
+cp LICENSE.GPL2 %{buildroot}/usr/share/doc/qtscript/LICENSE.GPL2
 cp LICENSE.GPL3 %{buildroot}/usr/share/doc/qtscript/LICENSE.GPL3
 cp LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/doc/qtscript/LICENSE.GPL3-EXCEPT
-cp LICENSE.GPL2 %{buildroot}/usr/share/doc/qtscript/LICENSE.GPL2
-cp LICENSE.FDL %{buildroot}/usr/share/doc/qtscript/LICENSE.FDL
 cp LICENSE.LGPL3 %{buildroot}/usr/share/doc/qtscript/LICENSE.LGPL3
 cp src/3rdparty/javascriptcore/JavaScriptCore/COPYING.LIB %{buildroot}/usr/share/doc/qtscript/src_3rdparty_javascriptcore_JavaScriptCore_COPYING.LIB
 cp src/3rdparty/javascriptcore/JavaScriptCore/pcre/COPYING %{buildroot}/usr/share/doc/qtscript/src_3rdparty_javascriptcore_JavaScriptCore_pcre_COPYING
-cp tests/benchmarks/script/v8/tests/LICENSE.txt %{buildroot}/usr/share/doc/qtscript/tests_benchmarks_script_v8_tests_LICENSE.txt
 cp tests/benchmarks/script/sunspider/tests/LICENSE.txt %{buildroot}/usr/share/doc/qtscript/tests_benchmarks_script_sunspider_tests_LICENSE.txt
+cp tests/benchmarks/script/v8/tests/LICENSE.txt %{buildroot}/usr/share/doc/qtscript/tests_benchmarks_script_v8_tests_LICENSE.txt
 %make_install
 
 %files
@@ -248,14 +256,17 @@ cp tests/benchmarks/script/sunspider/tests/LICENSE.txt %{buildroot}/usr/share/do
 /usr/lib64/qt5/mkspecs/modules/qt_lib_scripttools.pri
 /usr/lib64/qt5/mkspecs/modules/qt_lib_scripttools_private.pri
 
+%files extras
+%defattr(-,root,root,-)
+/usr/lib64/libQt5ScriptTools.so.5
+/usr/lib64/libQt5ScriptTools.so.5.11
+/usr/lib64/libQt5ScriptTools.so.5.11.1
+
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt5Script.so.5
 /usr/lib64/libQt5Script.so.5.11
 /usr/lib64/libQt5Script.so.5.11.1
-/usr/lib64/libQt5ScriptTools.so.5
-/usr/lib64/libQt5ScriptTools.so.5.11
-/usr/lib64/libQt5ScriptTools.so.5.11.1
 
 %files license
 %defattr(-,root,root,-)
