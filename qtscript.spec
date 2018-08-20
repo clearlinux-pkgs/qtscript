@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.11.1
-Release  : 10
+Release  : 11
 URL      : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qtscript-everywhere-src-5.11.1.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qtscript-everywhere-src-5.11.1.tar.xz
 Summary  : No detailed summary available
@@ -30,6 +30,7 @@ classes.
 Summary: dev components for the qtscript package.
 Group: Development
 Requires: qtscript-lib
+Requires: qtscript-extras
 Provides: qtscript-devel
 
 %description dev
@@ -74,7 +75,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1534487481
+export SOURCE_DATE_EPOCH=1534794497
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/qtscript
 cp LICENSE.FDL %{buildroot}/usr/share/doc/qtscript/LICENSE.FDL
