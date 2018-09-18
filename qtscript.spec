@@ -4,12 +4,12 @@
 #
 Name     : qtscript
 Version  : 5.11.2
-Release  : 13
-URL      : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtscript-everywhere-src-5.11.2.tar.xz
-Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtscript-everywhere-src-5.11.2.tar.xz
+Release  : 14
+URL      : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtscript-everywhere-src-5.11.2.zip
+Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtscript-everywhere-src-5.11.2.zip
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : BSD-3-Clause BSD-3-Clause-Clear GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-3.0
+License  : BSD-2-Clause BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0 MIT
 Requires: qtscript-lib
 Requires: qtscript-license
 Requires: qtscript-extras
@@ -75,7 +75,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1537307759
+export SOURCE_DATE_EPOCH=1537311493
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/qtscript
 cp LICENSE.FDL %{buildroot}/usr/share/doc/qtscript/LICENSE.FDL
