@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.12.0
-Release  : 15
+Release  : 16
 URL      : http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtscript-everywhere-src-5.12.0.zip
 Source0  : http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtscript-everywhere-src-5.12.0.zip
 Summary  : No detailed summary available
@@ -75,7 +75,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1544412539
+export SOURCE_DATE_EPOCH=1544558999
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtscript
 cp LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtscript/LICENSE.FDL
@@ -260,15 +260,17 @@ cp tests/benchmarks/script/v8/tests/LICENSE.txt %{buildroot}/usr/share/package-l
 %files extras
 %defattr(-,root,root,-)
 /usr/lib64/libQt5ScriptTools.so.5
+/usr/lib64/libQt5ScriptTools.so.5.12
+/usr/lib64/libQt5ScriptTools.so.5.12.0
 
 %files lib
 %defattr(-,root,root,-)
 %exclude /usr/lib64/libQt5ScriptTools.so.5
+%exclude /usr/lib64/libQt5ScriptTools.so.5.12
+%exclude /usr/lib64/libQt5ScriptTools.so.5.12.0
 /usr/lib64/libQt5Script.so.5
 /usr/lib64/libQt5Script.so.5.12
 /usr/lib64/libQt5Script.so.5.12.0
-/usr/lib64/libQt5ScriptTools.so.5.12
-/usr/lib64/libQt5ScriptTools.so.5.12.0
 
 %files license
 %defattr(0644,root,root,0755)
