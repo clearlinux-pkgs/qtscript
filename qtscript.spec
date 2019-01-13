@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.12.0
-Release  : 16
+Release  : 17
 URL      : http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtscript-everywhere-src-5.12.0.zip
 Source0  : http://download.qt.io/official_releases/qt/5.12/5.12.0/submodules/qtscript-everywhere-src-5.12.0.zip
 Summary  : No detailed summary available
