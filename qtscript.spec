@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.12.2
-Release  : 19
+Release  : 20
 URL      : http://download.qt.io/official_releases/qt/5.12/5.12.2/submodules/qtscript-everywhere-src-5.12.2.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.12/5.12.2/submodules/qtscript-everywhere-src-5.12.2.tar.xz
 Summary  : No detailed summary available
@@ -75,7 +75,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1552688694
+export SOURCE_DATE_EPOCH=1552689301
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtscript
 cp LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtscript/LICENSE.FDL
