@@ -5,8 +5,8 @@
 Name     : qtscript
 Version  : 5.15.0
 Release  : 29
-URL      : http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscript-everywhere-src-5.15.0.tar.xz
-Source0  : http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscript-everywhere-src-5.15.0.tar.xz
+URL      : https://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscript-everywhere-src-5.15.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscript-everywhere-src-5.15.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause BSD-3-Clause-Clear GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-3.0
