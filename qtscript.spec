@@ -4,7 +4,7 @@
 #
 Name     : qtscript
 Version  : 5.15.2
-Release  : 32
+Release  : 33
 URL      : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtscript-everywhere-src-5.15.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtscript-everywhere-src-5.15.2.tar.xz
 Summary  : No detailed summary available
@@ -89,18 +89,18 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1643742166
+export SOURCE_DATE_EPOCH=1662657198
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtscript
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtscript/61907422fefcd2313a9b570c31d203a6dbebd333
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/LICENSE.GPL2 %{buildroot}/usr/share/package-licenses/qtscript/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/LICENSE.GPL3 %{buildroot}/usr/share/package-licenses/qtscript/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qtscript/e93757aefa405f2c9a8a55e780ae9c39542dfc3a
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/LICENSE.LGPL3 %{buildroot}/usr/share/package-licenses/qtscript/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/src/3rdparty/javascriptcore/JavaScriptCore/COPYING.LIB %{buildroot}/usr/share/package-licenses/qtscript/130f5281a2ef2a49822787e013323bde2ff119dd
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/src/3rdparty/javascriptcore/JavaScriptCore/pcre/COPYING %{buildroot}/usr/share/package-licenses/qtscript/2b6fa847d802d22e07e3820736fb44c16b993753
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/tests/benchmarks/script/sunspider/tests/LICENSE.txt %{buildroot}/usr/share/package-licenses/qtscript/b645cd68a59c15141e05c635c05b78d6b9258e6e
-cp %{_builddir}/qtscript-everywhere-src-5.15.2/tests/benchmarks/script/v8/tests/LICENSE.txt %{buildroot}/usr/share/package-licenses/qtscript/d665d19f92487f37fa3b97cc14fad2b3857f1713
+cp %{_builddir}/qtscript-everywhere-src-%{version}/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtscript/61907422fefcd2313a9b570c31d203a6dbebd333 || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/LICENSE.GPL2 %{buildroot}/usr/share/package-licenses/qtscript/4cc77b90af91e615a64ae04893fdffa7939db84c || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/LICENSE.GPL3 %{buildroot}/usr/share/package-licenses/qtscript/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qtscript/e93757aefa405f2c9a8a55e780ae9c39542dfc3a || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/LICENSE.LGPL3 %{buildroot}/usr/share/package-licenses/qtscript/f45ee1c765646813b442ca58de72e20a64a7ddba || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/src/3rdparty/javascriptcore/JavaScriptCore/COPYING.LIB %{buildroot}/usr/share/package-licenses/qtscript/130f5281a2ef2a49822787e013323bde2ff119dd || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/src/3rdparty/javascriptcore/JavaScriptCore/pcre/COPYING %{buildroot}/usr/share/package-licenses/qtscript/2b6fa847d802d22e07e3820736fb44c16b993753 || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/tests/benchmarks/script/sunspider/tests/LICENSE.txt %{buildroot}/usr/share/package-licenses/qtscript/b645cd68a59c15141e05c635c05b78d6b9258e6e || :
+cp %{_builddir}/qtscript-everywhere-src-%{version}/tests/benchmarks/script/v8/tests/LICENSE.txt %{buildroot}/usr/share/package-licenses/qtscript/d665d19f92487f37fa3b97cc14fad2b3857f1713 || :
 %make_install
 
 %files

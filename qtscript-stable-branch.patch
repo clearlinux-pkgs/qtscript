@@ -8,6 +8,10 @@ Jani Heikkinen (2):
       Bump version
       Bump version from 5.15.3 to 5.15.4
 
+Tarja Sundqvist (2):
+      Bump version from 5.15.4 to 5.15.5
+      Bump version from 5.15.5 to 5.15.6
+
 diff --git a/coin/product_dependencies.yaml b/coin/product_dependencies.yaml
 new file mode 100644
 index 0000000..3b8e901
