@@ -2,3 +2,10 @@
 # but are undesirable. One entry per line, no whitespace.
 Qt5Script
 Qt5ScriptTools
+Qt6Script
+Qt6ScriptTools
+Qt6Core
+Qt6Gui
+Qt6Test
+Qt6UiTools
+Qt6Widgets
